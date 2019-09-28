@@ -3,7 +3,7 @@ import numpy as np
 
 
 if __name__ == '__main__':
-    video_file = '/home/ssilvari/Downloads/sub1_mker_depth.mp4'
+    video_file = '/home/ssilvari/Downloads/test.webm'
     cap = cv2.VideoCapture(video_file)
 
     n_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
