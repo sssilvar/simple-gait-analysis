@@ -20,6 +20,8 @@ if __name__ == '__main__':
     while cap.isOpened():
         ret, frame = cap.read()
         if ret:
+            # Smooth it out
+            frame = cv2.GaussianBlur(frame, (5, 5), cv2.BORDER_DEFAULT)
             # Extract background
             fgmask = fgbg.apply(frame)
             bg_frames.append(fgmask)
